@@ -59,9 +59,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    max-width: 100vw;
 }
 
 body {
+    overflow-x: hidden;
     line-height: 1.6;
     background: #050814;
     color: var(--text-main);
@@ -306,13 +308,19 @@ body {
 /* ===== UPDATED EVENTS SECTION (NO IMAGES) ===== */
 .events-section {
     padding: 80px 20px;
+    display:flex;
+    flex-direction: column;
     /* background: var(--bg-main); */
+    align-items: center;
+
 }
 
 .events-grid {
     display: grid;
     /* Automatically adjust columns based on screen width */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    justify-content: center;
     gap: 25px;
     padding: 20px;
     width: 100%;
@@ -491,6 +499,7 @@ body {
     list-style: none;
     max-width: 600px;
     margin: auto;
+    overflow-x:hidden;
 }
 
 .schedule li {
