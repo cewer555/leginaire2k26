@@ -106,7 +106,7 @@ function animate() {
             if (distance < connectionDistance) {
                 ctx.beginPath();
                 ctx.strokeStyle = `rgba(255,255,255, ${1 - distance / connectionDistance})`;
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 3;
                 ctx.moveTo(p1.x, p1.y);
                 ctx.lineTo(p2.x, p2.y);
                 ctx.stroke();
