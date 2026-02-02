@@ -446,8 +446,9 @@ body {
         padding: 40px 20px;
         width: 95%;
     }
-    #techcanvas{
+    #techCanvas{
         opacity:0;
+        display:none;
     }
 
     #countdown {
