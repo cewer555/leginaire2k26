@@ -231,7 +231,3 @@ window.addEventListener('resize', () => {
         for(let i=0; i<newCount; i++) nodes.push(new StarNode());
     }
 });
-
-
-
-
