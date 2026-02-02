@@ -447,7 +447,7 @@ body {
         width: 95%;
     }
     #techcanvas{
-        opacity:1;
+        opacity:0;
     }
 
     #countdown {
