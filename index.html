@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&family=Exo+2:wght@200;400;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <!-- LOADING OVERLAY -->
   <!-- CINEMATIC INTRO OVERLAY -->
 <div id="cinematic-intro">
-  <div class="intro-glow"></div>
-
-  <div class="intro-center">
-    <h1>Legionaire 2k26</h1>
-    <div class="intro-loader"></div>
-    <p>Initializing systems</p>
-  </div>
+    <div class="space-warp"></div> <div class="intro-center">
+        <h1 class="space-title">LEGIONAIRE 2K26</h1>
+        <div class="satellite-loader"></div>
+        <p id="status-log">ESTABLISHING ORBITAL LINK...</p>
+    </div>
 </div>
 
+<div id="stars"></div> <div id="stars2"></div> <canvas id="techCanvas"></canvas> ```
 
     <div id="stars"></div>
   <div id="stars2"></div>
@@ -50,6 +50,7 @@
 
     <div class="hero-content">
         <h1 class="intro-title">Legionaire2k26</h1>
+        <p class="hero-slogan">Command the Cosmos. Code the Future.</p>
         <div id="countdown">
   <span>
     <strong id="days">00</strong>
@@ -103,93 +104,87 @@
 <section id="events" class="events-section reveal">
     <h2 class="section-title" id="event">Event Details</h2>
     <div class="events-grid">
-    <div class="event-card reveal-scale" onclick="this.classList.toggle('flipped')">
-    <div class="event-card-inner">
-
-        <!-- FRONT -->
-        <div class="event-card-front">
-            <img src="ChatGPT Image Feb 1, 2026, 12_45_51 PM.png" alt="Codeathon">
-             <h5>Smart Idea Hackathon</h5>
-            <p>Innovate and pitch solutions to real-world problems.</p>
-        </div>
-
-        <!-- BACK -->
-        <div class="event-card-back">
-  <h5>Smart Idea Hackathon</h5>
-  <ul class="event-details">
-    <li><span>Start</span><strong>10:00 AM</strong></li>
-    <li><span>End</span><strong>10:00 PM</strong></li>
-    <li><span>Duration</span><strong>12 Hours</strong></li>
-    <li><span>Venue</span><strong>Main Lab Block</strong></li>
-  </ul>
-</div>
-
-
-    </div>
-</div>
-
-           
         
-
         <div class="event-card reveal-scale" onclick="this.classList.toggle('flipped')">
-    <div class="event-card-inner">
-
-        <!-- FRONT -->
-        <div class="event-card-front">
-            <img src="ChatGPT Image Feb 1, 2026, 12_44_34 PM.png" alt="Codeathon">
-            <h5>Codeathon</h5>
-            <p>Build, code, and deploy within limited time.</p>
+            <div class="event-card-inner">
+                <div class="event-card-front">
+                    <div class="event-icon-container">
+                        <div class="event-icon">01</div>
+                    </div>
+                    <h5>Idea Hackathon</h5>
+                    <p>Pitch disruptive solutions to modern-day challenges in sustainability and tech.</p>
+                    <span class="click-hint">Click to flip for rules</span>
+                </div>
+                <div class="event-card-back">
+                    <h5>Hackathon Rules</h5>
+                    <ul class="event-details">
+                        <li><span>Team Size</span><strong>2 - 4 Members</strong></li>
+                        <li><span>Duration</span><strong>12 Hours</strong></li>
+                        <li><span>Venue</span><strong>Main Auditorium</strong></li>
+                        <li><span>Prize Pool</span><strong>$1,000</strong></li>
+                    </ul>
+                    <button class="btn view-details-btn" onclick="event.stopPropagation(); openModal('hackathon')">
+    View Details
+</button>
+                    <div class="reg-status">Status: <strong>Open</strong></div>
+                </div>
+            </div>
         </div>
 
-        <!-- BACK -->
-        <div class="event-card-back">
-  <h5>Smart Idea Hackathon</h5>
-  <ul class="event-details">
-    <li><span>Start</span><strong>10:00 AM</strong></li>
-    <li><span>End</span><strong>10:00 PM</strong></li>
-    <li><span>Duration</span><strong>12 Hours</strong></li>
-    <li><span>Venue</span><strong>Main Lab Block</strong></li>
-  </ul>
-</div>
-
-
-    </div>
-</div>
-
-
         <div class="event-card reveal-scale" onclick="this.classList.toggle('flipped')">
-    <div class="event-card-inner">
-
-        <!-- FRONT -->
-        <div class="event-card-front">
-            <img src="ChatGPT Image Feb 1, 2026, 12_47_21 PM.png" alt="UI/UX Designathon">
-            <h5>UI/UX Designathon</h5>
-            <p>Design intuitive and aesthetic user experiences.</p>
+            <div class="event-card-inner">
+                <div class="event-card-front">
+                    <div class="event-icon-container">
+                        <div class="event-icon">02</div>
+                    </div>
+                    <h5>Rapid Codeathon</h5>
+                    <p>Test your logic and efficiency in a high-intensity competitive coding sprint.</p>
+                    <span class="click-hint">Click to flip for rules</span>
+                </div>
+                <div class="event-card-back">
+                    <h5>Codeathon Rules</h5>
+                    <ul class="event-details">
+                        <li><span>Mode</span><strong>Individual</strong></li>
+                        <li><span>Languages</span><strong>C++, Py, Java</strong></li>
+                        <li><span>Venue</span><strong>Lab Block A</strong></li>
+                        <li><span>Prize Pool</span><strong>$500</strong></li>
+                    </ul>
+                    <button class="btn view-details-btn" onclick="event.stopPropagation(); openModal('hackathon')">
+    View Details
+</button>
+                    <div class="reg-status">Status: <strong>Open</strong></div>
+                </div>
+            </div>
         </div>
 
-        <!-- BACK -->
-        <div class="event-card-back">
-  <h5>Smart Idea Hackathon</h5>
-  <ul class="event-details">
-    <li><span>Start</span><strong>10:00 AM</strong></li>
-    <li><span>End</span><strong>10:00 PM</strong></li>
-    <li><span>Duration</span><strong>12 Hours</strong></li>
-    <li><span>Venue</span><strong>Main Lab Block</strong></li>
-  </ul>
-</div>
+        <div class="event-card reveal-scale" onclick="this.classList.toggle('flipped')">
+            <div class="event-card-inner">
+                <div class="event-card-front">
+                    <div class="event-icon-container">
+                        <div class="event-icon">03</div>
+                    </div>
+                    <h5>Design-a-thon</h5>
+                    <p>Create user-centric designs and high-fidelity interactive prototypes.</p>
+                    <span class="click-hint">Click to flip for rules</span>
+                </div>
+                <div class="event-card-back">
+                    <h5>Design Rules</h5>
+                    <ul class="event-details">
+                        <li><span>Tools</span><strong>Figma / Adobe XD</strong></li>
+                        <li><span>Evaluation</span><strong>UX & UI</strong></li>
+                        <li><span>Venue</span><strong>Creative Suite</strong></li>
+                        <li><span>Prize Pool</span><strong>$750</strong></li>
+                    </ul>
+                    <button class="btn view-details-btn" onclick="event.stopPropagation(); openModal('hackathon')">
+    View Details
+</button>
+                    <div class="reg-status">Status: <strong>Open</strong></div>
+                </div>
+            </div>
+        </div>
 
-
-    </div>
-</div>
-
-    </div>
     </div>
 </section>
-
-
-
-
-
     <!-- About Section
     <section id="about" class="section">
         <h2>About the Event</h2>
@@ -201,29 +196,45 @@
 
     <!-- Schedule Section -->
     <section id="schedule" class="section dark reveal">
-  <h2 class="section-title">Event Schedule</h2>
+    <h2 class="section-title">Mission Timeline</h2>
 
-  <div class="timeline">
-    <div class="timeline-item ">
-      <span class="time">Day 1</span>
-      <p>Opening Ceremony & Problem Statement</p>
-    </div>
+    <div class="timeline">
+        <div class="timeline-item reveal-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="time-tag">09:00 AM | Day 1</span>
+                <h4>Initialization</h4>
+                <p>Opening Ceremony & Problem Statement Briefing at the Main Auditorium.</p>
+            </div>
+        </div>
 
-    <div class="timeline-item">
-      <span class="time">Day 1</span>
-      <p>Coding Begins</p>
-    </div>
+        <div class="timeline-item reveal-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="time-tag">11:00 AM | Day 1</span>
+                <h4>Execution Phase</h4>
+                <p>Coding and Design sessions commence across all sectors.</p>
+            </div>
+        </div>
 
-    <div class="timeline-item">
-      <span class="time">Day 2</span>
-      <p>Final Submission</p>
-    </div>
+        <div class="timeline-item reveal-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="time-tag">09:00 AM | Day 2</span>
+                <h4>System Sync</h4>
+                <p>Final polishing, debugging, and project documentation phase.</p>
+            </div>
+        </div>
 
-    <div class="timeline-item">
-      <span class="time">Day 2</span>
-      <p>Results & Awards</p>
+        <div class="timeline-item reveal-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="time-tag">03:00 PM | Day 2</span>
+                <h4>Termination</h4>
+                <p>Final submissions and Results Declaration ceremony.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 
@@ -238,7 +249,26 @@
         </form>
         <p id="formMessage"></p>
     </section>
+    <div class="event-card-back">
+    <h5>Hackathon Rules</h5>
+    <ul class="event-details">
+        <li><span>Team Size</span><strong>2 - 4 Members</strong></li>
+        <li><span>Duration</span><strong>12 Hours</strong></li>
+        <li><span>Venue</span><strong>Main Auditorium</strong></li>
+        <li><span>Prize Pool</span><strong>$1,000</strong></li>
+    </ul>
+    <button class="btn view-details-btn" onclick="event.stopPropagation(); openModal('hackathon')">View Details</button>
+    <div class="reg-status">Status: <strong>Open</strong></div>
+    
+</div>
 
+<div id="detailsModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modalBody">
+            </div>
+    </div>
+</div>
     <footer>
         <p>© 2026 Hackathon2k26 | All Rights Reserved</p>
     </footer>
