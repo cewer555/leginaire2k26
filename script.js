@@ -106,7 +106,7 @@ function animate() {
             if (distance < connectionDistance) {
                 ctx.beginPath();
                 ctx.strokeStyle = `rgba(255,255,255, ${1 - distance / connectionDistance})`;
-                ctx.lineWidth = 3;
+                ctx.lineWidth = 2;
                 ctx.moveTo(p1.x, p1.y);
                 ctx.lineTo(p2.x, p2.y);
                 ctx.stroke();
@@ -160,20 +160,33 @@ window.addEventListener("load", () => {
 // 1. Define event data
 const eventInfo = {
     hackathon: {
-        title: "Idea Hackathon",
+        title: "Hackathon",
         rules: ["Must use original ideas.", "2-4 members per team.", "AI tools are permitted for prototyping."],
         coordinators: "John Doe, Sarah Smith",
         contact: "+1 234 567 890"
     },
-    codeathon: {
-        title: "Rapid Codeathon",
-        rules: ["Individual participation.", "Languages: C++, Java, Python only.", "Plagiarism leads to disqualification."],
+    Codeathon: {
+        title: "Codeathon",
+        rules: [
+  "Participants must compete individually",
+  "Only the specified programming languages and tools are allowed.",
+  "All code must be written during the event duration.",
+  "Plagiarism or use of pre-written code will lead to disqualification.",
+  "Judges’ decisions are final."
+]
+,
         coordinators: "Alex Rivera",
         contact: "+1 987 654 321"
     },
-    designathon: {
-        title: "Design-a-thon",
-        rules: ["Figma or Adobe XD only.", "Must provide interactive prototype.", "Focus on UX accessibility."],
+    ThinkersLeague: {
+        title: "ThinkersLeague",
+       rules: [
+  "Teams or individuals as per event guidelines.",
+  "Questions will be time-bound.",
+  "Use of external resources is prohibited.",
+  "Decisions of the quiz master are final."
+]
+,
         coordinators: "Emily Chen",
         contact: "design.dept@college.edu"
     }
